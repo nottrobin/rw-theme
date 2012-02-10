@@ -1,0 +1,125 @@
+/**
+ * reset
+ **/
+
+/* Normalise all elements */
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, input, button, textarea, select, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    /* Remove any padding */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    
+    /* Inherit sensible defaults */
+    font:            inherit;
+    text-decoration: inherit;
+    font-size:       1em;
+    line-height: normal;
+    text-align:      inherit;
+    color:           inherit;
+    background:      transparent;
+}
+div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, input, button, textarea, select, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    /* Baseline alignment is just cool */
+    vertical-align:  baseline;
+    
+    /* Screw webkit */
+    -webkit-appearance: none;
+    
+    /* Parents should contain their children */
+    overflow: hidden;
+}
+html {
+    /* Inherit sensible defaults */
+    font-family:     helvetica sans-serif;
+    font-size:       16px;
+    text-decoration: none;
+    text-align:      left;
+    color:           #fff;
+    background:      #000;
+}
+
+/* Make sure HTML5 elements are block */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+/* No bullets */
+ul, ol { list-style: none; }
+
+/* No quotes */
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+/* Force display:block on a couple of things */
+img, input, label, textarea, select, button {
+    display: block;
+    box-sizing: content-box;
+}
+
+/* Hand cursor for clickable elements */
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: pointer;
+}
+
+/* Remove nefarious padding from input */
+input:first-line {
+    display: inline-block;
+}
+/* Buttons can't be dragged or selected (http://goo.gl/Qizmf) */
+button {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-drag: -moz-none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+/* Nice tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Basic text styling */
+html {
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    font-family: helvetica, sans-serif;
+    color: black;
+    line-height: 1.25em; /* 20px */
+    background-color: #fff;
+    text-align: left;
+}
+

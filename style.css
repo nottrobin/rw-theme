@@ -1,0 +1,190 @@
+/**
+ * OilGreen theme
+ * ==
+ * Author: Robin Winslow Morris - http://robinwinslow.co.uk - robin@robinwinslow.co.uk
+ * Date: 2011-09-15
+ *
+ * Pallette
+ * --
+ * #2b2909 - rgba(43,  41,  9,    1) - Subtle green       (body text, header background top)
+ * #0c0701 - rgba(12,  7,   1,    1) - Almost black       (header background bottom)
+ * #a5a084 - rgba(165, 160, 132,  1) - Light green        (body background top)
+ * #f0f0f0 - rgba(240, 240, 240,  1) - Light grey         (body background bottom)
+ * #9ba848 - rgba(155, 168, 72,   1) - Bright olive green (anchor text, header text, header bottom border)
+ * #383838 - rgba(56,  56,  56,   1) - Grey               (anchor :hover text, footer background)
+ * #ffffff - rgba(255, 255, 255,  1) - White              (Content-area background, footer text)
+ */
+
+@import('normalise.css');
+
+/**
+ * Structure
+ **/
+
+p, h1, h2, h3, h4 {
+    margin: 0 0 1em 0;
+    line-height: 1.5em;
+}
+article, aside, header {
+    margin: 0 0 1em 0;
+}
+article, body>aside {
+    background-color: #fff;
+    padding: 1em 1.5em 0 1.5em;
+}
+
+body {
+    text-align: center;
+    font-size: 0;
+}
+body>* {
+    text-align: left;
+    font-size: 16px;
+}
+
+body>header>*,
+body>footer>* {
+    max-width: 39em;
+    margin: 0 auto;
+}
+body>footer>* {
+    padding: 1em 0;
+}
+body>header h1 {
+    max-width: 13em;
+    padding: 0.5em 0 0 0;
+}
+body>article,
+body>aside,
+body>section {display: inline-block;}
+body>article,
+body>aside {max-width: 39em;}
+body>section {max-width: 42em;}
+
+/* If page is wider than 60em, split out into columns */
+@media (min-width: 60em) {
+    body>aside {
+        max-width: 12em;
+        margin: 0 1.5em;
+        vertical-align: top;
+    }
+    body>header>* {
+        max-width: 57em;
+    }
+    body>header>h1 {
+        max-width: 19em;
+    }
+    body>footer>* {
+        max-width: 57em;
+    }
+}
+
+/**
+ * Styling
+ */
+header {
+  background: #2b2909; /* Fall-back for linear-gradient fail */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b2909), color-stop(100%, #0c0701)); /* Safari 4+, Chrome 2+ */ 
+  background: -webkit-linear-gradient(#2b2909, #0c0701); /* Safari 5.1+, Chrome 10+ */
+  background: linear-gradient(#2b2909, #0c0701);
+  background: -o-linear-gradient(#2b2909, #0c0701); /* Opera 11.10 */
+  background: -ms-linear-gradient(#2b2909, #0c0701); /* IE10 */  
+  border-bottom: 2px solid #9ba848;
+  -webkit-box-shadow: inset 0 -5px 5px -3px #606060; /* Saf3.0+, Chrome */
+  -moz-box-shadow: inset 0 -5px 5px -3px #606060; /* FF3.5 - 3.6 */
+  box-shadow: inset 0 -5px 5px -3px #606060; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+}
+footer {
+  color: white;
+  background-color: #383838;
+  -webkit-box-shadow: inset 0 5px 5px -3px #000; /* Saf3.0+, Chrome */
+  -moz-box-shadow: inset 0 5px 5px -3px #000; /* FF3.5 - 3.6 */
+  box-shadow: inset 0 5px 5px -3px #000; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+}
+.central-area .content-area {
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 15px -2px rgba(56, 56, 56, 1); /* Saf3.0+, Chrome */
+  -moz-box-shadow: 0 3px 15px -2px rgba(56, 56, 56, 1); /* FF3.5 - 3.6 */
+  box-shadow: 0 3px 15px -2px rgba(56, 56, 56, 1); /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+}
+/* Header and nav */
+header h1 {
+  color: rgba(155, 168, 72, 0.5);
+  font-family: 'IM Fell Engautolish';
+  font-size: 3em;
+  padding: 0.5em 0.5em 0 0.5em;
+}
+header a {opacity: 0.5;}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+header nav li {
+  color: #98a67e;
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 15px 1.5em;
+}
+header nav li.current, header nav li:hover {
+  position: relative;
+}
+header nav li.current:after {
+  display: block;
+  border-color: transparent transparent #9ba848 transparent;
+  border-style: solid;
+  border-width: 10px;
+  bottom: 0;
+  content: '';
+  height: 0;
+  left: 50%;
+  margin: 0 0 0 -10px;
+  position: absolute;
+  width: 0;
+}
+/* Side content */
+.central-area aside.content-area {
+  opacity: 0.5;
+}
+
+/**
+ * Default elements
+ */
+html, body {
+  background: #f0f0f0; /* Fall-back for linear-gradient fail */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5a084), color-stop(100%, #f0f0f0)); /* Safari 4+, Chrome 2+ */ 
+  background: -webkit-linear-gradient(#a5a084, #f0f0f0); /* Safari 5.1+, Chrome 10+ */
+  background: linear-gradient(#a5a084, #f0f0f0);
+  background: -o-linear-gradient(#a5a084, #f0f0f0); /* Opera 11.10 */
+  background: -ms-linear-gradient(#a5a084, #f0f0f0); /* IE10 */
+  color: #2b2909;
+  font-family: 'open sans';
+  line-height: normal;
+  min-height: 100%;
+  position: relative;
+}
+a {
+  color: #9ba848;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px dotted #888;
+  color: #888;
+}
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+p {
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
+}
+h2, section h1, article article h1 {
+  font-size: 1.5em;
+}
+h3, section h2, article article h2, section section h1, section article h1, aside h1, article article article h1 {
+  font-size: 1.3em;
+}
+
